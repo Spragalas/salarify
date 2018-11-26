@@ -1,0 +1,10 @@
+<mat-toolbar color="primary"><h1>{{title}}</h1></mat-toolbar>
+<mat-list dense role="list">
+  <mat-list-item role="listitem" *ngFor="let employee of employees">
+    <span matLine><b>{{employee.Name}}</b> </span>
+    <p matLine>
+      <span>Current salary: {{employee.Salary}} euro</span>
+      <button mat-button (click)="showEditDialog(employee)">Edit</button>
+    </p>
+  </mat-list-item>
+</mat-list>

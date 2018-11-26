@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Edit employee {{data.employee.Name}}</h1>
+<div mat-dialog-content [formGroup]="satisfactionForm">
+  <mat-radio-group formControlName="options"
+                   labelPosition="after"
+                   name="Satisfaction Score"
+                   style="display: inline-flex;flex-direction: column;padding:12px 24px 12px 24px;">
+    <mat-radio-button value="VerySatisfied">Very Satisfied</mat-radio-button>
+    <mat-radio-button value="Satisfied">Satisfied</mat-radio-button>
+    <mat-radio-button value="AboveAverage">Above Average</mat-radio-button>
+    <mat-radio-button value="BelowAverage">Below Average</mat-radio-button>
+    <mat-radio-button value="Unsatisfied">Unsatisfied</mat-radio-button>
+    <mat-radio-button value="VeryUnsatisfied">Very Unsatisfied</mat-radio-button>
+  </mat-radio-group>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="satisfactionForm.value.options" cdkFocusInitial>Save</button>
+</div>
