@@ -17,8 +17,6 @@ export class EditDialog {
     this.satisfactionForm = this.fb.group({
       options: [data.employee.SatisfactionScore]
     });
-    console.log(this.myForm);
-    console.log(this.data);
   }
 
   onNoClick(): void {
